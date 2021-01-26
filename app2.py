@@ -8,7 +8,7 @@ def App():
 
     def handleSubmit(event):
         event.preventDefault()
-        if len(editItem) > 0:  # In edit mode
+        if editItem:  # In edit mode
             new_list = list(items)  # Make a copy
             new_list[new_list.index(editItem)] = newItem
             setItems(new_list)  # Update our state
@@ -51,7 +51,7 @@ def App():
 
     return el('form', {'onSubmit': handleSubmit},
               el('label', {'htmlFor': 'newItem'},
-                 "Add Item: " if len(editItem) == 0 else "Edit Item: "
+                 "Edit Item: " if editItem else "Add Item: "
                  ),
               el('input', {'id': 'newItem',
                            'onChange': handleChange,
