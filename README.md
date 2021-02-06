@@ -2,7 +2,7 @@
 ## Tutorial Demo Code
 
 ### Hello
-- hello.htm
+- hello.html
 - hello.py
 
 *transcrypt --nomin --map hello*
@@ -27,7 +27,7 @@
 *npm start*
 
 ### React App 2
-- index.html  
+- index.html  (change *src* to **app2.py**)
 - pyreact.py  
 - app2.py
 
