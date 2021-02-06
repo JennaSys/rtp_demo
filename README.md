@@ -1,4 +1,7 @@
 # React to Python
+Book Info: https://jennasys.com/rtp.html
+
+---
 ## Presentation Demo Code
 
 ### Hello
