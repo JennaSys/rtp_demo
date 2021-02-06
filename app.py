@@ -20,18 +20,18 @@ def App():
         target = event['target']
         setNewItem(target['value'])
 
-    return el('form',  {'onSubmit': handleSubmit},
+    return el('form', {'onSubmit': handleSubmit},
               el('label', {'htmlFor': 'newItem'}, "New Item: "),
               el('input', {'id': 'newItem',
                            'onChange': handleChange,
                            'value': newItem
-                          }
-                ),
-              el('input',  {'type':  'submit'}),
+                           }
+                 ),
+              el('input', {'type': 'submit'}),
               el('ol', None,
-                  el(ListItems, {'items': items})
-                )
-             )
+                 el(ListItems, {'items': items})
+                 )
+              )
 
 
 render(App, None, 'root')
