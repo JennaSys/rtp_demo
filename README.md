@@ -1,5 +1,5 @@
 # React to Python
-## Tutorial Demo Code
+## Presentation Demo Code
 
 ### Hello
 - hello.html
