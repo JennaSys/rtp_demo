@@ -1,5 +1,5 @@
 # React to Python
-Book Info: [https://jennasys.com/rtp](https://pyreact.com)
+Book Info: [https://pyreact.com](https://pyreact.com)
 
 ## Presentation Demo Code
 
