@@ -27,7 +27,7 @@ Book Info: [https://pyreact.com](https://pyreact.com)
 - hello_react.html  
 - hello_react.py
 
-*npx parcel --log-level 4 --no-cache hello_react.html*
+*transcrypt --nomin --map hello_react*
 
 ![Hello React Screenshot](https://github.com/JennaSys/rtp_demo/raw/main/images/helloreact_screenshot.png)
 
@@ -37,7 +37,7 @@ Book Info: [https://pyreact.com](https://pyreact.com)
 - pyreact.py  
 - app.py
 
-*npm start*
+*npx parcel --log-level 4 --no-cache index.html*
 
 ![React App Screenshot](https://github.com/JennaSys/rtp_demo/raw/main/images/app_screenshot.png)
 
