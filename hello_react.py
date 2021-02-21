@@ -1,4 +1,5 @@
-from pyreact import useState, render, createElement as el
+useState = React.useState
+el = React.createElement
 
 
 def App():
@@ -17,4 +18,11 @@ def App():
     ]
 
 
-render(App, None, 'root')
+def render():
+    ReactDOM.render(
+        el(App, None),
+        document.getElementById('root')
+    )
+
+
+document.addEventListener("DOMContentLoaded", render)
