@@ -1,3 +1,13 @@
+# __pragma__ ('skip')
+def require(lib):
+    return lib
+
+class document:
+    getElementById = None
+    addEventListener = None
+# __pragma__ ('noskip')
+
+
 # Load React and ReactDOM JavaScript libraries into local namespace
 React = require('react')
 ReactDOM = require('react-dom')
