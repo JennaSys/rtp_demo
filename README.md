@@ -1,5 +1,7 @@
 # React to Python
-Book Info: [https://pyreact.com](https://pyreact.com)
+Book Info:  
+![React to Python book](https://github.com/JennaSys/rtp_demo/raw/main/images/rtp_cover.jpg)  
+[https://pyreact.com](https://pyreact.com)
 
 ## Intro to Transcrypt/React Demo Code
 
