@@ -17,6 +17,23 @@ createElement = React.createElement
 useState = React.useState
 
 
+def react_component(component):
+    def react_element(props, *children):
+        return createElement(component, props, *children)
+
+    return react_element
+
+
+Form = react_component('form')
+Label = react_component('label')
+Input = react_component('input')
+Ol = react_component('ol')
+Li = react_component('li')
+Button = react_component('button')
+Div = react_component('div')
+Span = react_component('span')
+
+
 def render(root_component, props, container):
     """Loads main react component into DOM"""
 

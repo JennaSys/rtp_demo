@@ -1,9 +1,11 @@
-from pyreact import useState, render, createElement as el
+from pyreact import useState, render, react_component
+from pyreact import Form, Label, Input, Ol, Li
 
 
+@react_component
 def ListItems(props):
     items = props['items']
-    return [el('li', {'key': item}, item) for item in items]
+    return [Li({'key': item}, item) for item in items]
 
 
 def App():
@@ -20,16 +22,16 @@ def App():
         target = event['target']
         setNewItem(target['value'])
 
-    return el('form', {'onSubmit': handleSubmit},
-              el('label', {'htmlFor': 'newItem'}, "New Item: "),
-              el('input', {'id': 'newItem',
+    return Form({'onSubmit': handleSubmit},
+              Label({'htmlFor': 'newItem'}, "New Item: "),
+              Input({'id': 'newItem',
                            'onChange': handleChange,
                            'value': newItem
                            }
                  ),
-              el('input', {'type': 'submit'}),
-              el('ol', None,
-                 el(ListItems, {'items': items})
+              Input({'type': 'submit'}),
+              Ol(None,
+                 ListItems({'items': items})
                  )
               )
 

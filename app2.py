@@ -1,4 +1,5 @@
-from pyreact import useState, render, createElement as el
+from pyreact import useState, render, react_component
+from pyreact import Form, Label, Input, Ol, Li, Button
 
 
 def App():
@@ -31,38 +32,40 @@ def App():
         setNewItem(item)  # Set the new item value
         setEditItem(item)  # Set the edit item value
 
+    @react_component
     def ListItem(props):
         item = props['item']
 
-        return el('li', None,
+        return Li(None,
                   props['item'] + " ",
-                  el('button', {'type': 'button',
-                                'onClick': lambda: handleDelete(item)
-                                }, "Delete"
-                     ),
-                  el('button', {'type': 'button',
-                                'onClick': lambda: handleEdit(item)
-                                }, "Edit"
-                     ),
+                  Button({'type': 'button',
+                          'onClick': lambda: handleDelete(item)
+                          }, "Delete"
+                         ),
+                  Button({'type': 'button',
+                          'onClick': lambda: handleEdit(item)
+                          }, "Edit"
+                         ),
                   )
 
+    @react_component
     def ListItems():
-        return [el(ListItem, {'key': item, 'item': item}) for item in items]
+        return [ListItem({'key': item, 'item': item}) for item in items]
 
-    return el('form', {'onSubmit': handleSubmit},
-              el('label', {'htmlFor': 'newItem'},
-                 "Edit Item: " if editItem else "Add Item: "
-                 ),
-              el('input', {'id': 'newItem',
-                           'onChange': handleChange,
-                           'value': newItem
-                           }
-                 ),
-              el('input', {'type': 'submit'}),
-              el('ol', None,
-                 el(ListItems, {'items': items})
-                 )
-              )
+    return Form({'onSubmit': handleSubmit},
+                Label({'htmlFor': 'newItem'},
+                      "Edit Item: " if editItem else "Add Item: "
+                      ),
+                Input({'id': 'newItem',
+                       'onChange': handleChange,
+                       'value': newItem
+                       }
+                      ),
+                Input({'type': 'submit'}),
+                Ol(None,
+                   ListItems()
+                   )
+                )
 
 
 render(App, None, 'root')
