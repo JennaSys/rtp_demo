@@ -46,7 +46,7 @@ def App():
                      ),
                   )
 
-    def ListItems():
+    def ListItems(props):
         return [el(ListItem, {'key': item, 'item': item}) for item in items]
 
     return el('form', {'onSubmit': handleSubmit},
@@ -60,7 +60,7 @@ def App():
                  ),
               el('input', {'type': 'submit'}),
               el('ol', None,
-                 el(ListItems, {'items': items})
+                 el(ListItems, None)
                  )
               )
 
