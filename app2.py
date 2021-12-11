@@ -49,7 +49,7 @@ def App():
                   )
 
     @react_component
-    def ListItems():
+    def ListItems(props):
         return [ListItem({'key': item, 'item': item}) for item in items]
 
     return Form({'onSubmit': handleSubmit},
@@ -63,7 +63,7 @@ def App():
                       ),
                 Input({'type': 'submit'}),
                 Ol(None,
-                   ListItems()
+                   ListItems(None)
                    )
                 )
 
