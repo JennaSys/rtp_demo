@@ -13,13 +13,13 @@ React = require('react')
 ReactDOM = require('react-dom')
 
 # Map React javaScript objects to Python identifiers
-createElement = React.createElement
+# createElement = React.createElement
 useState = React.useState
 
 
 def react_component(component):
     def react_element(props, *children):
-        return createElement(component, props, *children)
+        return React.createElement(component, props, *children)
 
     return react_element
 
@@ -39,7 +39,7 @@ def render(root_component, props, container):
 
     def main():
         ReactDOM.render(
-            React.createElement(root_component, props),
+            root_component(props),
             document.getElementById(container)
         )
 

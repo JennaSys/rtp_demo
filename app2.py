@@ -2,6 +2,7 @@ from pyreact import useState, render, react_component
 from pyreact import Form, Label, Input, Ol, Li, Button
 
 
+@react_component
 def App():
     newItem, setNewItem = useState("")
     editItem, setEditItem = useState("")

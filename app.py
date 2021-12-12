@@ -8,6 +8,7 @@ def ListItems(props):
     return [Li({'key': item}, item) for item in items]
 
 
+@react_component
 def App():
     newItem, setNewItem = useState("")
     items, setItems = useState([])

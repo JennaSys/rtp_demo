@@ -35,6 +35,7 @@ def ListItems(props):
                  ) for item in items]
 
 
+@react_component
 def App():
     newItem, setNewItem = useState("")
     editItem, setEditItem = useState("")
