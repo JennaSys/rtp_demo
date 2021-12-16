@@ -38,7 +38,7 @@ def App():
         item = props['item']
 
         return Li(None,
-                  props['item'] + " ",
+                  item + " ",
                   Button({'type': 'button',
                           'onClick': lambda: handleDelete(item)
                           }, "Delete"

@@ -9,7 +9,7 @@ def ListItem(props):
     handleEdit = props['handleEdit']
 
     return Li(None,
-              props['item'] + " ",
+              item + " ",
               Button({'type': 'button',
                       'onClick': lambda: handleDelete(item)
                       }, "Delete"
