@@ -8,6 +8,8 @@ venv/
 __target__/
 dist/
 .cache/
+.build/
+.parcel-cache/
 node_modules/
 __pycache__/
 

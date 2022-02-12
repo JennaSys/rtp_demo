@@ -39,7 +39,7 @@ Book Info:
 - pyreact.py  
 - app.py
 
-*npx parcel --log-level 4 --no-cache index.html*
+*npx parcel --log-level info --no-cache index.html*
 
 ![React App Screenshot](https://github.com/JennaSys/rtp_demo/raw/main/images/app_screenshot.png)
 
